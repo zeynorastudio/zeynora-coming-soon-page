@@ -1,0 +1,45 @@
+{"location":"components/EarlyAccessModal.tsx:4","message":"EarlyAccessModal importing supabase","data":{"isClient":false},"timestamp":1765735305705,"sessionId":"debug-session","runId":"run1","hypothesisId":"C"}
+{"location":"components/EarlyAccessModal.tsx:5","message":"EarlyAccessModal imported supabase successfully","data":{"hasSupabase":true},"timestamp":1765735305738,"sessionId":"debug-session","runId":"run1","hypothesisId":"A"}
+{"location":"lib/supabase.ts:4","message":"Module loading","data":{"isClient":true,"hasUrl":true,"hasKey":true},"timestamp":1765735308582,"sessionId":"debug-session","runId":"run3","hypothesisId":"A"}
+{"location":"lib/supabase.ts:48","message":"Proxy getter","data":{"property":"$$typeof","propType":"string"},"timestamp":1765735308585,"sessionId":"debug-session","runId":"run4","hypothesisId":"E"}
+{"location":"lib/supabase.ts:12","message":"getClient called","data":{"alreadyInitialized":false},"timestamp":1765735308588,"sessionId":"debug-session","runId":"run3","hypothesisId":"E"}
+{"location":"lib/supabase.ts:22","message":"Checking env vars","data":{"hasUrl":true,"hasKey":true},"timestamp":1765735308589,"sessionId":"debug-session","runId":"run3","hypothesisId":"B"}
+{"location":"lib/supabase.ts:34","message":"Creating client","data":{"urlPrefix":"https://oanzsagekfpo..."},"timestamp":1765735308590,"sessionId":"debug-session","runId":"run3","hypothesisId":"E"}
+{"location":"lib/supabase.ts:57","message":"Proxy returning","data":{"property":"$$typeof","isFunction":false,"hasValue":false},"timestamp":1765735308621,"sessionId":"debug-session","runId":"run4","hypothesisId":"E"}
+{"location":"lib/supabase.ts:40","message":"Client created","data":{"clientCreated":true},"timestamp":1765735308620,"sessionId":"debug-session","runId":"run3","hypothesisId":"E"}
+{"location":"lib/supabase.ts:48","message":"Proxy getter","data":{"property":"$$typeof","propType":"string"},"timestamp":1765735308622,"sessionId":"debug-session","runId":"run4","hypothesisId":"E"}
+{"location":"lib/supabase.ts:57","message":"Proxy returning","data":{"property":"$$typeof","isFunction":false,"hasValue":false},"timestamp":1765735308623,"sessionId":"debug-session","runId":"run4","hypothesisId":"E"}
+{"location":"components/EarlyAccessModal.tsx:4","message":"EarlyAccessModal importing supabase","data":{"isClient":true},"timestamp":1765735308624,"sessionId":"debug-session","runId":"run1","hypothesisId":"C"}
+{"location":"lib/supabase.ts:12","message":"getClient called","data":{"alreadyInitialized":true},"timestamp":1765735308622,"sessionId":"debug-session","runId":"run3","hypothesisId":"E"}
+{"location":"components/EarlyAccessModal.tsx:5","message":"EarlyAccessModal imported supabase successfully","data":{"hasSupabase":true},"timestamp":1765735308624,"sessionId":"debug-session","runId":"run1","hypothesisId":"A"}
+{"location":"lib/supabase.ts:48","message":"Proxy getter","data":{"property":"$$typeof","propType":"string"},"timestamp":1765735317548,"sessionId":"debug-session","runId":"run4","hypothesisId":"E"}
+{"location":"lib/supabase.ts:40","message":"Client created","data":{"clientCreated":true},"timestamp":1765735317574,"sessionId":"debug-session","runId":"run3","hypothesisId":"E"}
+{"location":"lib/supabase.ts:34","message":"Creating client","data":{"urlPrefix":"https://oanzsagekfpo..."},"timestamp":1765735317564,"sessionId":"debug-session","runId":"run3","hypothesisId":"E"}
+{"location":"lib/supabase.ts:4","message":"Module loading","data":{"isClient":true,"hasUrl":true,"hasKey":true},"timestamp":1765735317545,"sessionId":"debug-session","runId":"run3","hypothesisId":"A"}
+{"location":"lib/supabase.ts:12","message":"getClient called","data":{"alreadyInitialized":false},"timestamp":1765735317550,"sessionId":"debug-session","runId":"run3","hypothesisId":"E"}
+{"location":"lib/supabase.ts:22","message":"Checking env vars","data":{"hasUrl":true,"hasKey":true},"timestamp":1765735317558,"sessionId":"debug-session","runId":"run3","hypothesisId":"B"}
+{"location":"lib/supabase.ts:48","message":"Proxy getter","data":{"property":"$$typeof","propType":"string"},"timestamp":1765735317582,"sessionId":"debug-session","runId":"run4","hypothesisId":"E"}
+{"location":"lib/supabase.ts:57","message":"Proxy returning","data":{"property":"$$typeof","isFunction":false,"hasValue":false},"timestamp":1765735317584,"sessionId":"debug-session","runId":"run4","hypothesisId":"E"}
+{"location":"components/EarlyAccessModal.tsx:4","message":"EarlyAccessModal importing supabase","data":{"isClient":true},"timestamp":1765735317585,"sessionId":"debug-session","runId":"run1","hypothesisId":"C"}
+{"location":"lib/supabase.ts:57","message":"Proxy returning","data":{"property":"$$typeof","isFunction":false,"hasValue":false},"timestamp":1765735317576,"sessionId":"debug-session","runId":"run4","hypothesisId":"E"}
+{"location":"lib/supabase.ts:12","message":"getClient called","data":{"alreadyInitialized":true},"timestamp":1765735317583,"sessionId":"debug-session","runId":"run3","hypothesisId":"E"}
+{"location":"components/EarlyAccessModal.tsx:5","message":"EarlyAccessModal imported supabase successfully","data":{"hasSupabase":true},"timestamp":1765735317586,"sessionId":"debug-session","runId":"run1","hypothesisId":"A"}
+{"location":"lib/supabase.ts:4","message":"Module loading","data":{"isClient":true,"hasUrl":true,"hasKey":true},"timestamp":1765735321151,"sessionId":"debug-session","runId":"run3","hypothesisId":"A"}
+{"location":"lib/supabase.ts:48","message":"Proxy getter","data":{"property":"$$typeof","propType":"string"},"timestamp":1765735321154,"sessionId":"debug-session","runId":"run4","hypothesisId":"E"}
+{"location":"lib/supabase.ts:12","message":"getClient called","data":{"alreadyInitialized":false},"timestamp":1765735321162,"sessionId":"debug-session","runId":"run3","hypothesisId":"E"}
+{"location":"lib/supabase.ts:22","message":"Checking env vars","data":{"hasUrl":true,"hasKey":true},"timestamp":1765735321165,"sessionId":"debug-session","runId":"run3","hypothesisId":"B"}
+{"location":"lib/supabase.ts:34","message":"Creating client","data":{"urlPrefix":"https://oanzsagekfpo..."},"timestamp":1765735321167,"sessionId":"debug-session","runId":"run3","hypothesisId":"E"}
+{"location":"lib/supabase.ts:40","message":"Client created","data":{"clientCreated":true},"timestamp":1765735321170,"sessionId":"debug-session","runId":"run3","hypothesisId":"E"}
+{"location":"lib/supabase.ts:57","message":"Proxy returning","data":{"property":"$$typeof","isFunction":false,"hasValue":false},"timestamp":1765735321171,"sessionId":"debug-session","runId":"run4","hypothesisId":"E"}
+{"location":"lib/supabase.ts:48","message":"Proxy getter","data":{"property":"$$typeof","propType":"string"},"timestamp":1765735321172,"sessionId":"debug-session","runId":"run4","hypothesisId":"E"}
+{"location":"lib/supabase.ts:12","message":"getClient called","data":{"alreadyInitialized":true},"timestamp":1765735321181,"sessionId":"debug-session","runId":"run3","hypothesisId":"E"}
+{"location":"lib/supabase.ts:57","message":"Proxy returning","data":{"property":"$$typeof","isFunction":false,"hasValue":false},"timestamp":1765735321182,"sessionId":"debug-session","runId":"run4","hypothesisId":"E"}
+{"location":"components/EarlyAccessModal.tsx:4","message":"EarlyAccessModal importing supabase","data":{"isClient":true},"timestamp":1765735321183,"sessionId":"debug-session","runId":"run1","hypothesisId":"C"}
+{"location":"components/EarlyAccessModal.tsx:5","message":"EarlyAccessModal imported supabase successfully","data":{"hasSupabase":true},"timestamp":1765735321183,"sessionId":"debug-session","runId":"run1","hypothesisId":"A"}
+{"location":"components/EarlyAccessModal.tsx:5","message":"EarlyAccessModal imported supabase successfully","data":{"hasSupabase":true},"timestamp":1765735328726,"sessionId":"debug-session","runId":"run1","hypothesisId":"A"}
+{"location":"components/EarlyAccessModal.tsx:4","message":"EarlyAccessModal importing supabase","data":{"isClient":true},"timestamp":1765735328725,"sessionId":"debug-session","runId":"run1","hypothesisId":"C"}
+{"location":"lib/supabase.ts:57","message":"Proxy returning","data":{"property":"prototype","isFunction":false,"hasValue":false},"timestamp":1765735328738,"sessionId":"debug-session","runId":"run4","hypothesisId":"E"}
+{"location":"lib/supabase.ts:48","message":"Proxy getter","data":{"property":"prototype","propType":"string"},"timestamp":1765735328729,"sessionId":"debug-session","runId":"run4","hypothesisId":"E"}
+{"location":"lib/supabase.ts:12","message":"getClient called","data":{"alreadyInitialized":true},"timestamp":1765735328736,"sessionId":"debug-session","runId":"run3","hypothesisId":"E"}
+{"location":"components/EarlyAccessModal.tsx:5","message":"EarlyAccessModal imported supabase successfully","data":{"hasSupabase":true},"timestamp":1765735336868,"sessionId":"debug-session","runId":"run1","hypothesisId":"A"}
+{"location":"components/EarlyAccessModal.tsx:4","message":"EarlyAccessModal importing supabase","data":{"isClient":true},"timestamp":1765735336866,"sessionId":"debug-session","runId":"run1","hypothesisId":"C"}
