@@ -17,9 +17,9 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: 'Zeynora — Premium Fashion House | Launching Soon',
   description: 'Zeynora is a premium fashion house crafting thoughtfully curated collections for modern Indian wardrobes. Launching soon.',
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://zeynora.com'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://www.zeynora.in'),
   alternates: {
-    canonical: '/',
+    canonical: 'https://www.zeynora.in',
   },
   robots: {
     index: true,
@@ -35,6 +35,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'Zeynora',
+    url: 'https://www.zeynora.in',
     title: 'Zeynora — Premium Fashion House | Launching Soon',
     description: 'Zeynora is a premium fashion house crafting thoughtfully curated collections for modern Indian wardrobes. Launching soon.',
     images: [
@@ -58,7 +59,7 @@ const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
   name: 'Zeynora',
-  url: 'https://www.zeynora.in/',
+  url: 'https://www.zeynora.in',
   logo: 'https://oanzsagekfpoenbkobgc.supabase.co/storage/v1/object/public/hero_images/zeyn%20logo.jpg',
   sameAs: [
     'https://www.instagram.com/zeynorastudio?igsh=MWd3bzh1eWR2b2NpNg==',
@@ -83,4 +84,3 @@ export default function RootLayout({
     </html>
   )
 }
-
