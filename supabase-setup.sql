@@ -19,3 +19,4 @@ WITH CHECK (true);
 
 -- Note: No read access for anonymous users (default RLS behavior blocks reads)
 
+

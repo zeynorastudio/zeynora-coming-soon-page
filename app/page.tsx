@@ -1,8 +1,10 @@
 'use client'
 
 import { useState } from 'react'
+import Link from 'next/link'
 import EarlyAccessModal from '@/components/EarlyAccessModal'
 import StickyBrandBar from '@/components/StickyBrandBar'
+import { FEATURED_PRODUCT } from '@/lib/product-data'
 
 const HERO_DESKTOP = 'https://oanzsagekfpoenbkobgc.supabase.co/storage/v1/object/public/hero_images/desktop%20hero.png'
 const HERO_MOBILE = 'https://oanzsagekfpoenbkobgc.supabase.co/storage/v1/object/public/hero_images/mobile%20hero%20(1).png'
@@ -157,6 +159,37 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Featured Product */}
+        <section className="py-16 md:py-24 px-8 md:px-12 lg:px-20 xl:px-32 bg-vine-red/95">
+          <div className="max-w-4xl mx-auto text-center space-y-8">
+            <p className="text-xs uppercase tracking-[0.2em] text-ivory/70">
+              First look
+            </p>
+            <Link
+              href={`/product/${FEATURED_PRODUCT.slug}`}
+              className="block group"
+            >
+              <div className="aspect-[3/4] max-w-sm mx-auto overflow-hidden rounded-lg bg-ivory/5">
+                <img
+                  src={FEATURED_PRODUCT.images.main}
+                  alt={FEATURED_PRODUCT.name}
+                  className="w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-[1.02]"
+                />
+              </div>
+              <h2 className="mt-6 text-xl md:text-2xl font-heading font-light text-ivory group-hover:text-gold transition-colors">
+                {FEATURED_PRODUCT.name}
+              </h2>
+              <p className="mt-2 text-gold font-body">
+                {FEATURED_PRODUCT.currency}
+                {FEATURED_PRODUCT.price.toLocaleString('en-IN')}
+              </p>
+              <span className="inline-block mt-4 text-sm text-ivory/80 border-b border-ivory/50 group-hover:border-gold transition-colors">
+                View details →
+              </span>
+            </Link>
+          </div>
+        </section>
+
         {/* Footer */}
         <footer className="py-8 md:py-10 px-8 md:px-12 lg:px-20 xl:px-32 bg-vine-red border-t border-ivory/10">
           <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
@@ -174,7 +207,13 @@ export default function Home() {
                 Designed and developed by Foundryly
               </p>
             </div>
-            <div className="flex items-center gap-4">
+            <div className="flex flex-wrap items-center gap-4">
+              <Link
+                href={`/product/${FEATURED_PRODUCT.slug}`}
+                className="text-ivory/60 hover:text-ivory/80 transition-opacity duration-300 font-body text-sm"
+              >
+                Shop — {FEATURED_PRODUCT.name}
+              </Link>
               <a
                 href="https://www.instagram.com/zeynorastudio?igsh=MWd3bzh1eWR2b2NpNg=="
                 target="_blank"
