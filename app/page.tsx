@@ -1,236 +1,86 @@
 'use client'
 
 import { useState } from 'react'
-import Link from 'next/link'
 import EarlyAccessModal from '@/components/EarlyAccessModal'
-import StickyBrandBar from '@/components/StickyBrandBar'
-import { FEATURED_PRODUCT } from '@/lib/product-data'
-
-const HERO_DESKTOP = 'https://oanzsagekfpoenbkobgc.supabase.co/storage/v1/object/public/hero_images/desktop%20hero.png'
-const HERO_MOBILE = 'https://oanzsagekfpoenbkobgc.supabase.co/storage/v1/object/public/hero_images/mobile%20hero%20(1).png'
+import Countdown from '@/components/Countdown'
 
 export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false)
 
   return (
     <>
-      <StickyBrandBar />
-      <main className="min-h-screen pt-16 md:pt-20">
-        {/* Hero Section */}
-        <section className="relative min-h-screen overflow-hidden">
-          {/* Background with vertical gradient */}
-          <div className="absolute inset-0 bg-gradient-to-b from-vine-red via-vine-red-light to-vine-red" />
-          
-          {/* Grain texture - unified across entire hero section */}
-          <div className="absolute inset-0 grain-texture" />
-          
-          {/* Vignette - Desktop only */}
-          <div className="hidden md:block absolute inset-0" 
-               style={{
-                 background: 'radial-gradient(ellipse at center, transparent 0%, transparent 50%, rgba(0,0,0,0.1) 100%)'
-               }} />
-          
-          {/* Bronze radial glow behind text - Desktop only */}
-          <div className="hidden md:block absolute left-0 top-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-bronze rounded-full opacity-5 blur-3xl -translate-x-1/4" />
+      <main className="min-h-screen bg-black text-white flex flex-col">
+        {/* Luxury launch hero — sole content */}
+        <section
+          className="relative flex-1 flex flex-col items-center justify-center px-6 sm:px-8 md:px-12 py-20 sm:py-24 md:py-28"
+          aria-labelledby="brand-heading"
+        >
+          {/* Soft warm atmosphere — not a flashy gradient wash */}
+          <div
+            className="pointer-events-none absolute inset-0 opacity-[0.07]"
+            style={{
+              background:
+                'radial-gradient(ellipse 70% 50% at 50% 40%, #D4AF37 0%, transparent 70%)',
+            }}
+            aria-hidden="true"
+          />
 
-          {/* Desktop Layout */}
-          <div className="hidden md:grid md:grid-cols-[45%_55%] w-full h-screen relative z-10 min-h-screen">
-            {/* Left: Text Content (45%) */}
-            <div className="flex flex-col justify-center px-12 lg:px-20 xl:px-32 space-y-6 relative z-10">
-              <div className="space-y-5">
-                <p className="text-xs lg:text-sm text-ivory/70 font-light tracking-[0.2em] uppercase">
-                  A new fashion house is arriving
-                </p>
-                <h1 className="text-4xl lg:text-5xl xl:text-6xl font-heading font-light text-ivory leading-[1.1]">
-                  Crafted slowly.<br />
-                  Worn beautifully.
-                </h1>
-                <p className="text-base lg:text-lg text-ivory/75 font-light leading-relaxed max-w-lg">
-                  Zeynora launches soon — a curated expression of modern Indian fashion.
-                </p>
-              </div>
-              <button
-                onClick={() => setIsModalOpen(true)}
-                className="self-start px-8 py-4 border-2 border-gold text-gold rounded-lg hover:bg-gold hover:text-vine-red transition-all duration-300 font-medium text-lg"
-              >
-                Get Early Access
-              </button>
-            </div>
-
-            {/* Right: Hero Image (55%) */}
-            <div className="relative h-full film-grain">
-              {/* Warm tint overlay */}
-              <div className="absolute inset-0 bg-bronze/5 z-10 pointer-events-none" />
-              
-              {/* Soft shadow at left edge for depth */}
-              <div 
-                className="absolute left-0 top-0 bottom-0 w-24 z-[15] pointer-events-none"
-                style={{
-                  background: 'linear-gradient(to right, rgba(139, 74, 92, 0.15) 0%, rgba(139, 74, 92, 0.08) 30%, transparent 60%)',
-                  filter: 'blur(8px)',
-                }}
-              />
-              
-              {/* Vine red color bleed overlay - left to right gradient */}
-              <div 
-                className="absolute left-0 top-0 bottom-0 w-1/2 z-20 pointer-events-none"
-                style={{
-                  background: 'linear-gradient(to right, rgba(139, 74, 92, 0.2) 0%, rgba(139, 74, 92, 0.12) 25%, rgba(139, 74, 92, 0.06) 40%, transparent 50%)',
-                }}
-              />
-              
-              <picture>
-                <source media="(min-width: 768px)" srcSet={HERO_DESKTOP} />
-                <img
-                  src={HERO_DESKTOP}
-                  alt="Zeynora Fashion"
-                  className="w-full h-full object-cover object-right relative z-0"
-                  style={{
-                    filter: 'sepia(5%) saturate(110%)',
-                  }}
-                />
-              </picture>
-            </div>
-          </div>
-
-          {/* Mobile Layout */}
-          <div className="md:hidden w-full flex flex-col relative z-10 min-h-screen">
-            {/* 1. Hero Image First */}
-            <div className="w-full aspect-[4/5] relative film-grain overflow-hidden">
-              {/* Warm tint overlay */}
-              <div className="absolute inset-0 bg-bronze/5 z-10 pointer-events-none" />
-              
-              {/* Soft shadow at bottom edge for depth */}
-              <div 
-                className="absolute bottom-0 left-0 right-0 h-16 z-[15] pointer-events-none"
-                style={{
-                  background: 'linear-gradient(to top, rgba(139, 74, 92, 0.12) 0%, rgba(139, 74, 92, 0.06) 40%, transparent 70%)',
-                  filter: 'blur(6px)',
-                }}
-              />
-              
-              <img
-                src={HERO_MOBILE}
-                alt="Zeynora Fashion"
-                className="w-full h-full object-cover object-center relative z-0"
-                style={{
-                  filter: 'sepia(5%) saturate(110%)',
-                }}
-              />
-            </div>
-
-            {/* 2. Hero Text Below Image */}
-            <div className="w-full px-6 sm:px-8 py-10 sm:py-12 bg-gradient-to-b from-vine-red via-vine-red-light to-vine-red relative">
-              <div className="absolute inset-0 grain-texture" />
-              <div className="max-w-lg mx-auto space-y-5 relative z-10">
-                <p className="text-[10px] sm:text-xs text-ivory/70 font-light tracking-[0.15em] uppercase text-center sm:text-left">
-                  A new fashion house is arriving
-                </p>
-                <h1 className="text-2xl sm:text-3xl font-heading font-light text-ivory leading-[1.15] text-center sm:text-left">
-                  Crafted slowly.<br />
-                  Worn beautifully.
-                </h1>
-                <p className="text-sm sm:text-base text-ivory/75 font-light leading-relaxed text-center sm:text-left">
-                  Zeynora launches soon — a curated expression of modern Indian fashion.
-                </p>
-              </div>
-            </div>
-
-            {/* 3. CTA Button */}
-            <div className="w-full px-6 sm:px-8 pb-12 bg-gradient-to-b from-vine-red-light to-vine-red relative">
-              <div className="max-w-lg mx-auto relative z-10">
-                <button
-                  onClick={() => setIsModalOpen(true)}
-                  className="w-full px-8 py-4 border-2 border-gold text-gold rounded-lg hover:bg-gold hover:text-vine-red transition-all duration-300 font-medium text-base sm:text-lg"
-                >
-                  Get Early Access
-                </button>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Editorial Statement */}
-        <section className="py-32 md:py-40 px-8 md:px-12 lg:px-20 xl:px-32 bg-vine-red-light/20">
-          <div className="max-w-4xl mx-auto">
-            <p className="text-2xl md:text-3xl lg:text-4xl text-ivory/85 font-light leading-relaxed text-center font-heading">
-              Collections shaped by intention, not algorithms.
-            </p>
-          </div>
-        </section>
-
-        {/* Featured Product */}
-        <section className="py-16 md:py-24 px-8 md:px-12 lg:px-20 xl:px-32 bg-vine-red/95">
-          <div className="max-w-4xl mx-auto text-center space-y-8">
-            <p className="text-xs uppercase tracking-[0.2em] text-ivory/70">
-              First look
-            </p>
-            <Link
-              href={`/product/${FEATURED_PRODUCT.slug}`}
-              className="block group"
+          <div className="relative z-10 w-full max-w-4xl mx-auto flex flex-col items-center text-center animate-luxury-fade">
+            <h1
+              id="brand-heading"
+              className="font-heading text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light tracking-[0.18em] text-white uppercase"
             >
-              <div className="aspect-[3/4] max-w-sm mx-auto overflow-hidden rounded-lg bg-ivory/5">
-                <img
-                  src={FEATURED_PRODUCT.images.main}
-                  alt={FEATURED_PRODUCT.name}
-                  className="w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-[1.02]"
-                />
-              </div>
-              <h2 className="mt-6 text-xl md:text-2xl font-heading font-light text-ivory group-hover:text-gold transition-colors">
-                {FEATURED_PRODUCT.name}
-              </h2>
-              <p className="mt-2 text-gold font-body">
-                {FEATURED_PRODUCT.currency}
-                {FEATURED_PRODUCT.price.toLocaleString('en-IN')}
-              </p>
-              <span className="inline-block mt-4 text-sm text-ivory/80 border-b border-ivory/50 group-hover:border-gold transition-colors">
-                View details →
-              </span>
-            </Link>
+              Zeynora
+            </h1>
+
+            <p className="mt-5 sm:mt-6 font-heading text-sm sm:text-base md:text-lg font-light tracking-[0.12em] text-white/70">
+              Luxury Pakistani &amp; Indian Fashion
+            </p>
+
+            <p className="mt-14 sm:mt-16 md:mt-20 text-[10px] sm:text-xs uppercase tracking-[0.35em] text-gold">
+              Launching In
+            </p>
+
+            <div className="mt-6 sm:mt-8 w-full">
+              <Countdown />
+            </div>
+
+            <p className="mt-12 sm:mt-14 md:mt-16 max-w-md text-sm sm:text-base font-light leading-relaxed text-white/60">
+              Be among the first to experience the launch.
+            </p>
+
+            <button
+              type="button"
+              onClick={() => setIsModalOpen(true)}
+              className="mt-8 sm:mt-10 px-10 sm:px-12 py-3.5 sm:py-4 border border-gold text-gold text-sm sm:text-base tracking-[0.2em] uppercase font-body transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:bg-gold hover:text-black hover:shadow-[0_8px_30px_rgba(212,175,55,0.15)] focus:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-black"
+            >
+              Notify Me
+            </button>
           </div>
         </section>
 
-        {/* Footer */}
-        <footer className="py-8 md:py-10 px-8 md:px-12 lg:px-20 xl:px-32 bg-vine-red border-t border-ivory/10">
-          <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-            <div className="text-center md:text-left space-y-1.5">
-              <h2 className="text-2xl font-heading font-semibold text-ivory">
-                Zeynora
-              </h2>
-              <p className="text-sm text-ivory/70">
-                Zeynora © {new Date().getFullYear()}
-              </p>
-              <p className="text-sm text-ivory/70 uppercase tracking-wide">
-                Launching Soon
-              </p>
-              <p className="text-xs text-ivory/30 mt-2">
-                Designed and developed by Foundryly
-              </p>
-            </div>
-            <div className="flex flex-wrap items-center gap-4">
-              <Link
-                href={`/product/${FEATURED_PRODUCT.slug}`}
-                className="text-ivory/60 hover:text-ivory/80 transition-opacity duration-300 font-body text-sm"
+        {/* Minimal footer */}
+        <footer className="relative z-10 py-8 px-6 border-t border-white/10">
+          <div className="max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p className="text-xs tracking-[0.15em] text-white/40 uppercase">
+              Zeynora © {new Date().getFullYear()}
+            </p>
+            <a
+              href="https://www.instagram.com/zeynorastudio?igsh=MWd3bzh1eWR2b2NpNg=="
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white/40 hover:text-gold transition-colors duration-500"
+              aria-label="Visit Zeynora on Instagram"
+            >
+              <svg
+                className="w-4 h-4"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
               >
-                Shop — {FEATURED_PRODUCT.name}
-              </Link>
-              <a
-                href="https://www.instagram.com/zeynorastudio?igsh=MWd3bzh1eWR2b2NpNg=="
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-ivory/60 hover:text-ivory/80 transition-opacity duration-300"
-                aria-label="Visit Zeynora on Instagram"
-              >
-                <svg
-                  className="w-5 h-5"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                  aria-hidden="true"
-                >
-                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                </svg>
-              </a>
-            </div>
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+              </svg>
+            </a>
           </div>
         </footer>
       </main>
@@ -239,4 +89,3 @@ export default function Home() {
     </>
   )
 }
-

@@ -30,11 +30,16 @@ const config: Config = {
       },
       animation: {
         'fade-in': 'fadeIn 0.3s ease-in-out',
+        'luxury-fade': 'luxuryFade 1.2s cubic-bezier(0.22, 1, 0.36, 1) both',
       },
       keyframes: {
         fadeIn: {
           '0%': { opacity: '0' },
           '100%': { opacity: '1' },
+        },
+        luxuryFade: {
+          '0%': { opacity: '0', transform: 'translateY(12px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
         },
       },
     },
